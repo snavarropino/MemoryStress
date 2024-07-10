@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MemoryStress": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
