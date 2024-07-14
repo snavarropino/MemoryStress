@@ -7,7 +7,7 @@ Create a docker image and upload to registry. executing the following command in
 
 ```powershell
 docker build -f .\MemoryStress\Dockerfile -t <registry>/<imagename>:latest .
-dockedr push <registry>/<imagename>:latest
+docker push <registry>/<imagename>:latest
 ```
 
 Then we can create a container job in Azure Container Apps to run the memory stress test. 
@@ -36,7 +36,7 @@ $primarySharedKey = az monitor log-analytics workspace get-shared-keys  --resour
 
 
 az containerapp env create -n $caeName -g $resourceGroup `
-  --logs-workspace-id $customerId `
+--logs-workspace-id $customerId `
 --logs-workspace-key $primarySharedKey `
 --location $location
 
